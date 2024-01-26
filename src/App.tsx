@@ -6,7 +6,7 @@ import ContactUs from "@/scenes/contactUs";
 import Footer from "@/scenes/footer";
 import { useEffect, useState } from "react";
 import { SelectedPage } from "@/shared/types";
-
+import { Analytics } from "@vercel/analytics/react";
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
     SelectedPage.Home
@@ -37,6 +37,7 @@ function App() {
       <OurClasses setSelectedPage={setSelectedPage} />
       <ContactUs setSelectedPage={setSelectedPage} />
       <Footer />
+      <Analytics />
     </div>
   );
 }
